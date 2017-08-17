@@ -1,0 +1,17 @@
+
+\begin{table}[h]
+\centering
+\begin{tabular}{cccc}
+\hline
+\textbf{Min v [µm/sec]} & \textbf{Max v [µm/sec]} & \textbf{Mean v [µm/sec]} & \textbf{SD v [µm/sec]} \\
+\hline
+5.752 & 51.694 & 16.129 & 12.505 \\
+2.539 & 16.066 & 8.766 & 3.813 \\
+2.325 & 9.522 & 4.725 & 1.598 \\
+2.014 & 19.643 & 7.316 & 3.648 \\
+2.294 & 16.211 & 7.923 & 2.804 \\
+\hline
+
+\end{tabular}
+\end{table}
+

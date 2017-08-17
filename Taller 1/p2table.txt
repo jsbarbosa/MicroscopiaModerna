@@ -1,0 +1,13 @@
+
+\begin{table}[h]
+\centering
+\begin{tabular}{cccccc}
+\hline
+\textbf{Slice} & \textbf{Count} & \textbf{Total Area} & \textbf{Average Size} & \textbf{\%Area} & \textbf{Mean} \\
+\hline
+azul.tif & 25 & 0.201 & 0.008 & 2.852 & 255 \\
+\hline
+
+\end{tabular}
+\end{table}
+
