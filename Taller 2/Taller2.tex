@@ -1,0 +1,58 @@
+%\documentclass[11pt]{article}
+
+\documentclass[addpoints,10pt]{exam}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xpatch}
+\usepackage{color}
+\usepackage{amsmath}
+
+\makeatletter
+\xpretocmd{\item@points@pageinfo}{\normalfont}{}{}
+\xapptocmd{\item@points@pageinfo}{\bfseries}{}{}
+\makeatother
+
+\begin{document}
+	\begin{center}
+		\LARGE\scshape{Taller 2}
+		
+		\vspace{1cm}
+		\large\scshape{Juan Barbosa - 201325901}
+	\end{center}
+
+	\begin{questions}
+		{
+			\question
+			A white floodlight beam crosses a large volume containing a tenuous molecular gas mixture of mostly oxygen and nitrogen. Compare the relative amount of scattering occurring for the yellow (580 nm) component with that of the violet (400 nm) component.
+		}
+		
+		De Rayleigh se sabe que el scattering es proporcional a $1/\lambda^4$:
+		\begin{equation}
+			S \propto \dfrac{1}{\lambda^4}
+		\end{equation}
+		
+		Entonces el cociente entre el scattering del violeta $(5v)$ y el amarillo $(y)$:
+		\begin{equation}
+			\dfrac{S_v}{S_y} = \dfrac{1/\lambda_v^4}{1/\lambda_y^4} = \left(\dfrac{\lambda_y}{\lambda_v}\right)^4
+		\end{equation}
+		\begin{equation}
+			S_v = S_y\left(\dfrac{\lambda_y}{\lambda_v}\right)^4 \approx 4.42S_y
+		\end{equation}
+		
+		{
+			\question
+			A very narrow laserbeam is incident at an angle of 58" on a horizontal mirror. The reflected beam strikes a wall at a spot 5.0 m away from the point of incidence where the beam hit the mirror. How far	horizontally is the wall from that point of incidence?
+		}
+		
+		El \'angulo incidente debe ser igual al reflejado. Lo cual implica que existe un tri\'angulo rect\'angulo con hipotenusa 5.0 m.
+		
+		\begin{equation}
+		\sin(58^\circ) = \dfrac{d}{5.0} \qquad \longrightarrow d = 5\sin(58^\circ)
+		\end{equation}
+		
+	\end{questions}
+	
+	
+\end{document}
