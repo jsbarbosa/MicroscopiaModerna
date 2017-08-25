@@ -49,9 +49,131 @@
 		El \'angulo incidente debe ser igual al reflejado. Lo cual implica que existe un tri\'angulo rect\'angulo con hipotenusa 5.0 m.
 		
 		\begin{equation}
-		\sin(58^\circ) = \dfrac{d}{5.0} \qquad \longrightarrow d = 5\sin(58^\circ)
+		\sin(58^\circ) = \dfrac{d}{5.0} \qquad \longrightarrow d = 5\sin(58^\circ) = 4.2\text{ m}
 		\end{equation}
 		
+		{
+			\question
+			Determine the direction of the exiting ray with respect to the incident ray.
+		}
+		
+		{
+			\question
+			Calculate the transmission angle for a ray incident in air at 30$^\circ$ on a block of crown glass (n = 1.52).
+		}
+		
+		Usando la ley de Snell:
+		\begin{equation}\label{slope}
+			\sin\theta_t = \dfrac{n_i}{n_t}\sin\theta_i
+		\end{equation}
+		\begin{equation}
+			\theta_t = \arcsin\left(\dfrac{n_i}{n_t}\sin\theta_i\right) = \arcsin\left(\dfrac{1.00}{1.52}\sin30\right) = 19.2 ^\circ
+		\end{equation}
+		
+		{
+			\question
+			Discuss the curve.
+			What is the significance of the slope of the line? Guess at what the dense medium might be.
+		}
+		
+		La ecuaci\'on (\ref{slope}) es an\'aloga a la ecuaci\'on de una recta con intercepto $b = 0$. Si $y = \sin \theta_t$ y $x = \sin \theta_i$, la pendiente corresponde con $m = n_i/n_t$. La pendiente se puede calcular como:
+		\begin{equation}
+			m = \dfrac{y_1 - y_0}{x_1 - x_0} = \dfrac{0.75 - 0.00}{1.00 - 0.00} = \dfrac{0.75}{1.00} = 0.75 \qquad \longrightarrow \qquad n_t = \dfrac{1}{0.75} = 1.33
+		\end{equation}
+		
+		El valor corresponde con el \'indice de refracci\'on del agua.
+		
+		{
+			\question
+			Light of wavelength 600 nm in vacuum enters a block of glass where $n = 1.5$. Compute its wavelength in the glass. What color would it appear to someone embedded in the glass?
+		}
+		
+		La definici\'on del \'indice de refracci\'on es:
+		\begin{equation}
+			n = \dfrac{c}{v} = \dfrac{\nu_0\lambda_0}{\nu_0\lambda'} = \dfrac{\lambda_0}{\lambda'} \qquad \longrightarrow \qquad \lambda' = \dfrac{\lambda_0}{n} = \dfrac{600}{1.5} = \dfrac{2 * 600}{3} = 400 \text{ nm}
+		\end{equation}
+		
+		En la regi\'on de 400 nm, los colores percibidos son azules/violetas.
+		
+		{
+			\question
+			An underwater swimmer shines a beam of light up toward the
+			surface. It strikes the air-water interface at 35$^\circ$. At what angle will it	emerge into the air?
+		}
+		
+		Usando la ecuaci\'on (\ref{slope}):
+		\begin{equation}
+			\theta_t = \arcsin\left(\dfrac{n_i}{n_t}\sin\theta_i\right) = \arcsin\left(\dfrac{1.33}{1.00}\sin35\right) = 49.7 ^\circ
+		\end{equation}
+		{
+			\question
+			Make a plot of $\theta_i$ versus $\theta_t$, for an air-glass boundary where
+			$n_{g} = 1.5$. Discuss the shape of the curve.
+		}
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width = 0.6\linewidth]{418.pdf}
+		\end{figure}
+		
+		{	\question
+			A laserbeam having a diameter $D$ in air strikes a piece of glass ($n_{g}$) at an angle $\theta_i$. What is the diameter of the beam in the glass?
+		}
+		
+		{
+			\question
+			Calculate the critical angle beyond which there is total internal reflection at an air-glass ($n_g = 1.5$) interface. Compare this result with that of Problem 4.5 (6).
+		}
+		
+		{
+			\question
+			What is the critical angle for total internal reflection for diamond? What, if anything, does the critical angle have to do with the luster of a well-cut diamond?
+		}
+
+		{
+			\question
+			Describe completely the state of polarization of each of the following waves:
+			\begin{enumerate}
+				\item $\vec{E} = \hat{i} E_0\cos(kz-wt) - \hat{j}E_0\cos(kz - wt)$
+				\item $\vec{E} = \hat{i}E_0\sin2\pi(z/\lambda - \nu t) - \hat{j}E_0\sin2\pi(z/\lambda - \nu t)$
+				\item $\vec{E} = \hat{i}E_0\sin(\omega t -kz) + \hat{j}E_0\sin(wt-kz-\pi/4)$
+				\item $\vec{E} = \hat{i}E_0\cos(\omega t - kz) + \hat{j}E_0\cos(\omega t - kz + \pi/2)$
+			\end{enumerate}
+		}
+		
+		{
+			\question
+			A beam of vertically polarized linear light is perpendicularly incident on an ideal linear polarizer. Show that if its transmission axis makes an angle of 60 $^\circ$ with the vertical of only 25 \% of the irradiance will be transmitted by the polarizer.
+		}
+		
+		{
+			\question
+			A glass vessel is placed between a pair of crossed HN-50 linear polarizers, and 50 \% of the natural light incident on the first polarizer is transmitted through the second polarizer. By how much did the sugar solution in the cell rotate the light passed by the first polarizer?
+		}
+		
+		{
+			\question
+			Imagine a pair of crossed polarizers with transmission axes vertical and horizontal. The beam emerging from the first polarizer has flux density $I_1$, and of course no light passes through the analyzer ($I_2 = 0$). Now insert a perfect linear polarizer (HN-50) with its transmission axis at 45 $^\circ$ to the vertical between the two elements, compute $I_2$. Think about the motion of the electrons that are radiating in each polarizer.
+		}
+		
+		{
+			\question
+			Show analytically that a beam entering a planar transparent plate emerges parallel to its initial direction. Derive an expression for the lateral displacement of the beam. Incidentally, the incoming and outgoing rays would be parallel even for a stack of plates of different material.
+		}
+		
+		{
+			\question
+			Light having a vacuum wavelength of 600 nm, traveling in a glass ($n_g = 1.50$) block, is incident at 45 $^\circ$ on a glass-air interface. It is then totally internally reflected. Determine the distance into the air at which the amplitude of the evanescent wave has dropped to a value of $1/e$ of its maximum value at the interface.
+		}
+		
+		{
+			\question
+			Suppose that we look at the source perpendicularly through a stack of $N$ microscope slides. The source seen through even a dozen slides will be noticeably darker. Assuming negligible absorption, show that the total transmittance of the stack is given by:
+			\begin{equation*}
+				T_t = (1-R)^{2N}
+			\end{equation*}
+			and evaluate $T_t$ for three slides in air.
+		}
 	\end{questions}
 	
 	
