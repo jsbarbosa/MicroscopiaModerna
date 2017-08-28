@@ -120,15 +120,40 @@
 			A laserbeam having a diameter $D$ in air strikes a piece of glass ($n_{g}$) at an angle $\theta_i$. What is the diameter of the beam in the glass?
 		}
 		
+		La diferencia de camino entre la parte superior del laser y la inferior es $\Delta x$, esta distancia es normal a la direcci\'on del rayo, por lo cual:
+		\begin{equation}
+			\tan\theta_i = \dfrac{\Delta x}{D} \qquad \longrightarrow \qquad \Delta x = D\tan\theta_i
+		\end{equation}
+		
+		Usando el teorema de Pit\'agoras:
+		\begin{equation}
+			D'^2 = D^2\tan\theta_i + D^2 = D^2\left(\tan^2\theta_i + 1\right) = D^2\sec^2\theta_i
+		\end{equation}
+		
+		\begin{equation}
+			D' = \dfrac{D}{\cos\theta_i}
+		\end{equation}
+		
 		{
 			\question
 			Calculate the critical angle beyond which there is total internal reflection at an air-glass ($n_g = 1.5$) interface. Compare this result with that of Problem 4.5 (6).
 		}
 		
+		Para la reflexi\'on interna total se calcula el \'angulo incidente para el cu\'al el \'angulo transmitido es 90 $^\circ$.
+		\begin{equation}
+			\theta_i =  \arcsin\left(\dfrac{n_2}{n_1}\right) = \arcsin\left(\dfrac{1.5}{1.0}\right)
+		\end{equation}
+		
+		Lo anterior no ocurre porque para que exista reflexi\'on interna total, se debe ir de un material \'opticamente m\'as denso a uno menos denso.
 		{
 			\question
 			What is the critical angle for total internal reflection for diamond? What, if anything, does the critical angle have to do with the luster of a well-cut diamond?
 		}
+		
+		Para el diamante el \'indice de refracci\'on es: 2.418, entonces:
+		\begin{equation}
+			\theta_i = \arcsin\left(\dfrac{1.000}{2.418}\right) = 24.43 ^\circ
+		\end{equation}
 
 		{
 			\question
