@@ -57,6 +57,8 @@
 			Determine the direction of the exiting ray with respect to the incident ray.
 		}
 		
+		Para la parte superior del espejo, el \'angulo reflejado es igual al incidente. Para el segundo se cumple que est\'a a un \'angulo de 90 $^\circ$, entonces la diferencia es $\theta_r = 90 - \theta_i$.
+		
 		{
 			\question
 			Calculate the transmission angle for a ray incident in air at 30$^\circ$ on a block of crown glass (n = 1.52).
@@ -166,30 +168,109 @@
 			\end{enumerate}
 		}
 		
+		La polarizaci\'on puede ser de tres tipos, lineal (un s\'olo plano), circular (dos planos, igual magnitud y desfase de $\pi/2$), y ell\'iptica (dos planos, magnitud distinta o desfase diferente de $\pi/2$).
+		\begin{enumerate}
+			\item $\vec{E} = (\hat{i} - \hat{j})E_0\cos(kz-wt) \qquad \theta = \arctan(-1) = -45^\circ$ Polarizaci\'on lineal.
+			\item $\vec{E} = (\hat{i} - \hat{j})E_0\sin2\pi(z/\lambda - \nu t) \qquad \theta = \arctan(-1) = -45^\circ$ Polarizaci\'on lineal.
+			
+			\item $\vec{E} = E_0\left(\hat{i}\sin(\alpha) + \hat{j}\sin(\alpha - \pi/4)\right)$ Ambas componentes tienen la misma magnitud, sin embargo existe un desfase de $\pi/4$, esto hace que la polarizaci\'on sea ell\'iptica.
+			
+			\item $\vec{E} =E_0\left(\hat{i}\cos(\alpha) + \hat{j}\cos(\alpha - \pi/2)\right)$ Ambas componentes tienen la misma magnitud, sin embargo existe un desfase de $\pi/2$, esto hace que la polarizaci\'on sea circular.
+		\end{enumerate}
 		{
 			\question
 			A beam of vertically polarized linear light is perpendicularly incident on an ideal linear polarizer. Show that if its transmission axis makes an angle of 60 $^\circ$ with the vertical of only 25 \% of the irradiance will be transmitted by the polarizer.
 		}
+		
+		La ley de Malus:
+		\begin{equation}
+			I(\theta) = \dfrac{c\epsilon_0}{2}E^1_{01}\cos^2\theta
+		\end{equation}
+		Para $\theta = 0$ la transmisi\'on de radiaci\'on es total.
+		\begin{equation}
+			I(0) = I_0 = \dfrac{c\epsilon_0}{2}E^1_{01} \qquad I(\theta) = I_0\cos^2\theta
+		\end{equation}
+		\begin{equation}
+			\dfrac{I(60)}{I_0} = \cos^2 60^\circ = 0.5^2 = 0.25
+		\end{equation}
 		
 		{
 			\question
 			A glass vessel is placed between a pair of crossed HN-50 linear polarizers, and 50 \% of the natural light incident on the first polarizer is transmitted through the second polarizer. By how much did the sugar solution in the cell rotate the light passed by the first polarizer?
 		}
 		
+		Si no existiera nada en el medio de los polarizadores, dado que ambos son paralelos, se deber\'ia observar intensidad $I = 0$. Sin embargo como la intensidad de salida es igual a la del primer polarizador, la luz debe haber rotado el mismo \'angulo que la diferencia entre los polarizadores, esto es 90$^\circ$.
+		
 		{
 			\question
 			Imagine a pair of crossed polarizers with transmission axes vertical and horizontal. The beam emerging from the first polarizer has flux density $I_1$, and of course no light passes through the analyzer ($I_2 = 0$). Now insert a perfect linear polarizer (HN-50) with its transmission axis at 45 $^\circ$ to the vertical between the two elements, compute $I_2$. Think about the motion of the electrons that are radiating in each polarizer.
 		}
+		
+		Las expresiones para cada polarizador son:
+		\begin{equation}
+			I_1 = I_1
+		\end{equation}
+		\begin{equation}
+			I_m = I_1\cos^2(\theta_m)
+		\end{equation}
+		\begin{equation}
+			I_2 = I_m\cos^2(\theta_2 - \theta_m) =  I_1\cos^2(\theta_m)\cos^2(\theta_2 - \theta_m) = I_1\cos^2(45)\cos^2(45) = I_1\cos^4(45)
+		\end{equation}
+		
+		El resultado es entonces:
+		\begin{equation}
+			I_2 = I_1\left(\dfrac{\sqrt{2}}{2}\right)^4 = \dfrac{I_1}{4}
+		\end{equation}
 		
 		{
 			\question
 			Show analytically that a beam entering a planar transparent plate emerges parallel to its initial direction. Derive an expression for the lateral displacement of the beam. Incidentally, the incoming and outgoing rays would be parallel even for a stack of plates of different material.
 		}
 		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width = 0.4\linewidth]{demo.png}
+		\end{figure}
+		
+		Por ley de Snell se tiene:
+		\begin{equation}
+			n_i\sin\theta_i = n_t\sin\theta_t
+		\end{equation}
+		
+		En el lado izquierdo de la figura se observa que los dos rayoz m\'as externos a la izquierda son paralelos, y el superior de ellos tiene \'angulo $\theta_t$, por lo cual $\theta_i' = \theta_t$, de la misma forma se tiene $\theta_i = \theta_t'$.
+		
+		La distancia entre los puntos $A$ y $B$ (lado derecho) se puede escribir en t\'erminos de el coseno de $\theta_t$.
+		
+		\begin{equation}
+			\cos\theta_t = \dfrac{d}{h} = \dfrac{d}{|B - A|}
+		\end{equation}
+		
+		Usando la misma figura tambi\'en se observa que es posible escribir la distancia como:
+		\begin{equation}
+			\sin(\theta_i - \theta_t) = \dfrac{a}{h} = \dfrac{a}{|B - A|}
+		\end{equation}
+		
+		Usando las dos ecuaciones anteriores:
+		\begin{equation}
+			a = \sin(\theta_i - \theta_t)|B - A| = \sin(\theta_i - \theta_t)\dfrac{d}{\cos\theta_t}
+		\end{equation}
+		
+		Como se observa en la figura derecha, $a$ corresponde con el desplazamiento del rayo incidente con el transmitido.
 		{
 			\question
 			Light having a vacuum wavelength of 600 nm, traveling in a glass ($n_g = 1.50$) block, is incident at 45 $^\circ$ on a glass-air interface. It is then totally internally reflected. Determine the distance into the air at which the amplitude of the evanescent wave has dropped to a value of $1/e$ of its maximum value at the interface.
 		}
+		
+		Para una onda electromagn\'etica, para el caso donde $\sin\theta_i > n_{ti}$, donde $n_{ti} = n_{t}/n_{i}$, adem\'as $k_t = 2\pi/\lambda$.
+		\begin{equation}
+			\beta = k_t\left(\dfrac{\sin^2\theta_i}{n_{ti}^2} - 1\right)^{1/2} = \dfrac{2\pi}{\lambda}\left(\dfrac{\sin^245}{(1/1.5)^2} - 1\right)^{1/2} = \dfrac{2\pi}{600\times10^{-9}}(0.125)^{1/2}= 3702402 \text{ 1/m} \qquad \text{ecuaci\'on 4.72}
+		\end{equation}
+		
+		Tambi\'en se sabe que la amplitud depende de $e^{y\beta}$, por la condici\'on de amplitud, $y\beta = 1$, donde $y$ es la distancia.
+		
+		\begin{equation}
+			y = \dfrac{1}{\beta} = 2.7009\times 10^{-7}\text{ m} = 270 \text{ nm}
+		\end{equation}
 		
 		{
 			\question
@@ -199,6 +280,23 @@
 			\end{equation*}
 			and evaluate $T_t$ for three slides in air.
 		}
+		
+		Existen dos fronteras en donde hay trasmisi\'on, para cada existe transmisi\'on $T$. Esto implica que para cada placa la transmisi\'on es $T^2$, para $N$ placas, la transmisi\'on total es $T^{2N}$.
+			
+		La transmisi\'on y la reflexi\'on debe sumar 1.
+		\begin{equation}
+			T_{total} = T^{2N} = (1-R)^{2N}
+		\end{equation}
+		
+		Para $R$
+		\begin{equation}
+			R = \left(\dfrac{n_t - n_i}{n_t  + n_i}\right)^2 = \left(\dfrac{1.5 - 1.0}{1.5 + 1.0}\right)^2 = \left(\dfrac{0.5}{2.5}\right)^2 = 0.04
+		\end{equation}
+		
+		La transmisi\'on total para 3 barreras es:
+		\begin{equation}
+			T_{total} = (1 - R)^(2\times3) = (0.96)^6 = 0.78
+		\end{equation}
 	\end{questions}
 	
 	
