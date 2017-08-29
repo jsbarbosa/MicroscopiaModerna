@@ -8,6 +8,7 @@
 \usepackage{xpatch}
 \usepackage{color}
 \usepackage{amsmath}
+\usepackage{hyperref}
 
 \makeatletter
 \xpretocmd{\item@points@pageinfo}{\normalfont}{}{}
@@ -107,6 +108,7 @@
 		\begin{equation}
 			\theta_t = \arcsin\left(\dfrac{n_i}{n_t}\sin\theta_i\right) = \arcsin\left(\dfrac{1.33}{1.00}\sin35\right) = 49.7 ^\circ
 		\end{equation}
+		
 		{
 			\question
 			Make a plot of $\theta_i$ versus $\theta_t$, for an air-glass boundary where
@@ -256,6 +258,8 @@
 		\end{equation}
 		
 		Como se observa en la figura derecha, $a$ corresponde con el desplazamiento del rayo incidente con el transmitido.
+		
+		Con informaci\'on de \url{http://www.cmu.edu/biolphys/smsl/teaching/IntermedOptics/IntOptics_data/HW/solns/HW\%204\%20solution.pdf}
 		{
 			\question
 			Light having a vacuum wavelength of 600 nm, traveling in a glass ($n_g = 1.50$) block, is incident at 45 $^\circ$ on a glass-air interface. It is then totally internally reflected. Determine the distance into the air at which the amplitude of the evanescent wave has dropped to a value of $1/e$ of its maximum value at the interface.
@@ -263,7 +267,7 @@
 		
 		Para una onda electromagn\'etica, para el caso donde $\sin\theta_i > n_{ti}$, donde $n_{ti} = n_{t}/n_{i}$, adem\'as $k_t = 2\pi/\lambda$.
 		\begin{equation}
-			\beta = k_t\left(\dfrac{\sin^2\theta_i}{n_{ti}^2} - 1\right)^{1/2} = \dfrac{2\pi}{\lambda}\left(\dfrac{\sin^245}{(1/1.5)^2} - 1\right)^{1/2} = \dfrac{2\pi}{600\times10^{-9}}(0.125)^{1/2}= 3702402 \text{ 1/m} \qquad \text{ecuaci\'on 4.72}
+			\beta = k_t\left(\dfrac{\sin^2\theta_i}{n_{ti}^2} - 1\right)^{1/2} = \dfrac{2\pi}{\lambda}\left(\dfrac{\sin^245}{(1/1.5)^2} - 1\right)^{1/2} = \dfrac{2\pi}{600\times10^{-9}}(0.125)^{1/2}= 3702402 \text{ 1/m}
 		\end{equation}
 		
 		Tambi\'en se sabe que la amplitud depende de $e^{y\beta}$, por la condici\'on de amplitud, $y\beta = 1$, donde $y$ es la distancia.
@@ -299,5 +303,7 @@
 		\end{equation}
 	\end{questions}
 	
+	
+	Tarea disponible en \url{https://github.com/jsbarbosa/MicroscopiaModerna}
 	
 \end{document}
