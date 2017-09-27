@@ -51,7 +51,60 @@
 			\left(\dfrac{M}{NA}\right) \approx \dfrac{3(6.45)}{0.244} \approx 60 \qquad \text{con $\lambda = 500$ nm}
 		\end{equation}
 		
-		{\question Qu\'e campo de visi\'on tienen los objetivos de 20x y 40x con la c\'amara dada?}
-		Suponiendo aperturas num\'ericas de 1.3x 
+		{\question Cubo de filtros}
+		\begin{table}[h]
+			\centering
+			\begin{tabular}{c|cccc}
+				\hline
+				\textbf{Molécula} & \textbf{1} & \textbf{2} & \textbf{5} & \textbf{6} \\
+				\hline
+				Alexa Fluor 488 & & X & & \\
+				Mito Tracker & & X & X & \\
+				DAPI & X & & & \\
+				\hline
+			\end{tabular}
+		\end{table}
 	\end{questions}
+
+	A nivel de laboratorio la calibración del microscópio se realiza usando una guía de escala, para la cual cada línea representa 10 $\mu$m. Usando \texttt{ImageJ} se mide la distancia entre dos líneas grandes (100 $\mu$m), usando la función \texttt{Analyze->Set scale...} se determina la escala. El campo observado corresponde entonces con 441 x 333 $\mu$m.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\linewidth]{calibracion.png}
+	\end{figure}
+
+	La combinación de los cromóforos da lugar a tres tipos distintos de tinción en las estructuras celulares. La superposición de las imágenes se da de la siguiente manera:
+	\begin{table}[!h]
+		\centering
+		\begin{tabular}{cc}
+			\hline
+			\textbf{Imagen} & \textbf{Canal} \\
+			\hline
+			Image\_2567 & Rojo \\
+			Image\_2570 & Verde \\
+			Image\_2573 & Azul \\
+			\hline
+		\end{tabular}
+	\end{table}
+
+	Usando la escala es posible calcular el tamaño de los núcleos celulares, los cuales tienen forma ovalada con semieje menor de $4.88$ $\mu$m, y semieje mayor de $7.03$ $\mu$m.
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.7\linewidth]{composite.png}
+	\end{figure}
+
+	Finalmente se toman varias fotografías usando distintos tiempos de exposición con el objetivo de observar la importancia del rango dinámico de la cámara.
+	
+	\begin{figure}[!h]
+		\centering
+		\begin{tabular}{ccc}
+			\includegraphics[width = 0.3\linewidth]{Image_2571.jpg} &
+			\includegraphics[width = 0.3\linewidth]{Image_2572.jpg} &
+			\includegraphics[width = 0.3\linewidth]{Image_2574.jpg}
+		\end{tabular}
+		\includegraphics[width=0.9\linewidth]{hists.png}
+	\end{figure}
+	
+	A la izquierda se tiene una imagen saturada, como se observa en el histograma correspondiente existe una densidad de la imagen que se encuentra justo en el límite de los 4095 bits de la cámara, en la imagen central se tiene un buen constraste porque se usa todo la mayor parte del rango dinámico de la cámara, sin embargo si se recorta el rango se observa una disminución en el constraste de las imágenes.
+	
+	Por esta razón se resalta la importancia de un tiempo de exposición adecuado, si la fotografía se obtiene con sobre exposición la mayoría de los detalles se perderán porque no entra suficiente luz al detector para tenerla encuenta, por el otro lado un exceso de luz satura el detector y no permite obtener información nueva. 
 \end{document}
